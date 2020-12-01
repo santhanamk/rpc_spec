@@ -1293,6 +1293,7 @@ Enumeration listing possible keyboard layouts.
 |`QWERTY`||
 |`QWERTZ`||
 |`AZERTY`||
+|`NUMERIC`||
 
 
 ### KeyboardEvent
@@ -2328,6 +2329,26 @@ Contains information about on-screen preset capabilities.
 |`supportsDynamicSubMenus`|Boolean|False|If true, the head unit supports dynamic sub-menus by sending OnUpdateSubMenu notifications. If true, you should not send AddCommands that attach to a parentID for an AddSubMenu until OnUpdateSubMenu is received with the menuID. At that point, you should send all AddCommands with a parentID that match the menuID. If not set, assume false.|
 
 
+### ConfigurableKeyboards
+Describes number of cofigurable Keys for Special characters.
+
+##### Parameters
+| Value |  Type | Mandatory | Description |
+| ---------- | ---------- |:-----------: |:-----------:|
+|`keyboardLayout`|KeyboardLayout|True|
+|`numConfigurableKeys`|Integer|True|
+
+
+### KeyboardCapabilities
+##### Parameters
+
+| Value |  Type | Mandatory | Description |
+| ---------- | ---------- |:-----------: |:-----------:|
+|`maskInputCharactersSupported`|Boolean|False|Availability of capability to mask input characters using keyboard. True: Available, False: Not Available.|
+|`supportedKeyboardLayouts`|KeyboardLayout[]|False|Supported keyboard layouts by HMI.|
+|`configurableKeys`|ConfigurableKeyboards[]|False|Get Number of Keys for Special characters, App can customize as per their needs.|
+
+
 ### WindowCapability
 ##### Parameters
 
@@ -2343,7 +2364,7 @@ Contains information about on-screen preset capabilities.
 |`softButtonCapabilities`|SoftButtonCapabilities[]|False|The number of soft buttons available on-window and the capabilities for each button.|
 |`menuLayoutsAvailable`|MenuLayout[]|False|An array of available menu layouts. If this parameter is not provided, only the `LIST` layout is assumed to be available|
 |`dynamicUpdateCapabilities`|DynamicUpdateCapabilities|False|Contains the head unit's capabilities for dynamic updating features declaring if the module will send dynamic update RPCs.|
-
+|`keyboardCapabilities`|KeyboardCapabilities|False|See KeyboardCapabilities.|
 
 ### WindowTypeCapabilities
 ##### Parameters
