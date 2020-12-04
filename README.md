@@ -2454,6 +2454,7 @@ Configuration of on-screen keyboard (if available).
 |`limitedCharacterList`|String[]|False|Array of keyboard characters to enable. All omitted characters will be greyed out (disabled) on the keyboard. If omitted, the entire keyboard will be enabled.|
 |`autoCompleteText`|String|False|Deprecated, use autoCompleteList instead.|
 |`autoCompleteList`|String[]|False|Allows an app to pre-populate the text field with a list of suggested or completed entries as the user types. If empty, the auto-complete list will be removed from the screen.|
+|`customizeKeys`|String[]|False|Array of special characters to show in customizable Keys. If omitted, keyboard will show default special characters.|
 
 
 ### DeviceInfo
