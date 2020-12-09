@@ -2761,6 +2761,8 @@
         <element name="ENTRY_VOICE" />
         <element name="ENTRY_CANCELLED" />
         <element name="ENTRY_ABORTED" />
+        <element name="INPUT_KEY_MASK_ENABLED" since="7.1"/>
+        <element name="INPUT_KEY_MASK_DISABLED" since="7.1"/>
     </enum>         
 
     <enum name="KeypressMode" since="3.0">
@@ -2775,6 +2777,13 @@
             <description>The keypresses are queue and a string is sent each time the user presses a keyboard key; the string contains the entire current entry.</description>
         </element>
     </enum>         
+
+    <enum name="KeyboardInputMask" since="7.1">
+        <description>Enumeration listing possible input character masking.</description>
+        <element name="ENABLE_INPUT_KEY_MASK" />
+        <element name="DISABLE_INPUT_KEY_MASK" />
+        <element name="USER_CHOICE_INPUT_KEY_MASK" />
+    </enum>
 
     <struct name="KeyboardProperties" since="3.0">
         <description>Configuration of on-screen keyboard (if available).</description>         
@@ -2806,6 +2815,9 @@
                 Allows an app to pre-populate the text field with a list of suggested or completed entries as the user types. 
                 If empty, the auto-complete list will be removed from the screen.
             </description>
+        </param>
+        <param name="maskInputCharacters" type="KeyboardInputMask" mandatory="false" since="7.1">
+            <description>Allows an app to mask entered characters on HMI</description>
         </param>
         <param name="customizeKeys" type="String" maxlength="1" minsize="1" maxsize="10" array="true" mandatory="false"  since="7.1">
             <description>Array of special characters to show in customizable Keys.</description>

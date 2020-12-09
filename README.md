@@ -1308,6 +1308,20 @@ Enumeration listing possible keyboard events.
 |`ENTRY_VOICE`||
 |`ENTRY_CANCELLED`||
 |`ENTRY_ABORTED`||
+|`INPUT_KEY_MASK_ENABLED`||
+|`INPUT_KEY_MASK_DISABLED`||
+
+
+### KeyboardInputMask
+Enumeration listing possible input character masking.
+
+##### Elements
+
+| Value | Description |
+| ---------- |:-----------:|
+|`ENABLE_INPUT_KEY_MASK`||
+|`DISABLE_INPUT_KEY_MASK`||
+|`USER_CHOICE_INPUT_KEY_MASK`||
 
 
 ### KeypressMode
@@ -2335,8 +2349,8 @@ Describes number of cofigurable Keys for Special characters.
 ##### Parameters
 | Value |  Type | Mandatory | Description |
 | ---------- | ---------- |:-----------: |:-----------:|
-|`keyboardLayout`|KeyboardLayout|True|
-|`numConfigurableKeys`|Integer|True|
+|`keyboardLayout`|KeyboardLayout|True||
+|`numConfigurableKeys`|Integer|True||
 
 
 ### KeyboardCapabilities
@@ -2454,6 +2468,7 @@ Configuration of on-screen keyboard (if available).
 |`limitedCharacterList`|String[]|False|Array of keyboard characters to enable. All omitted characters will be greyed out (disabled) on the keyboard. If omitted, the entire keyboard will be enabled.|
 |`autoCompleteText`|String|False|Deprecated, use autoCompleteList instead.|
 |`autoCompleteList`|String[]|False|Allows an app to pre-populate the text field with a list of suggested or completed entries as the user types. If empty, the auto-complete list will be removed from the screen.|
+|`maskInputCharacters`|KeyboardInputMask|False|Allows an app to mask entered characters on HMI|
 |`customizeKeys`|String[]|False|Array of special characters to show in customizable Keys. If omitted, keyboard will show default special characters.|
 
 
