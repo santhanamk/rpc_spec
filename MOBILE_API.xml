@@ -2721,6 +2721,9 @@
         <param name="trim" type="String" maxlength="500" mandatory="false">
             <description>Trim of the vehicle, e.g. SE</description>
         </param>
+        <param name="systemHardwareVersion" type="String" maxlength="500" mandatory="false" since="7.1">
+            <description>Hardware version of the vehicle</description>
+        </param>
     </struct>   
 
     <enum name="KeyboardLayout" since="3.0">
